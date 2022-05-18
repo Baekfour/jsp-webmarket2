@@ -1,5 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-   pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+   <%@ page import="java.util.Date" %>
+   <%@ page import="java.text.SimpleDateFormat" %>
+   
+   
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +21,18 @@
          </li>
       </ul>
    </nav>
-   <%!// º¯¼ö, ¸Þ¼­µå ¼±¾ð
-   String greeting = "Welcome to Web Shopping Mall";
+   <%!// ë³€ìˆ˜, ë©”ì„œë“œ ì„ ì–¸
+   String greeting = "ì›¹ ì‡¼í•‘ëª°ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤";
    String tagline = "Welcome to Web Market!";%>
    <%
-   // ±×³É java ÄÚµå
+   // ê·¸ëƒ¥ java ì½”ë“œ
    // out.println("<h1>Hello World</h1>");
    %>
 
    <div class="p-5 bg-primary text-white">
-   <!-- container : ÁÂ¿ì °¡¿îµ¥ Á¤·Ä -->
+   <!-- container : ì¢Œìš° ê°€ìš´ë° ì •ë ¬ -->
   <div class="container">
-  <!-- display-3 : Å« ±ÛÀÚÁß¿¡ º¸ÅëÅ©±â -->
+  <!-- display-3 : í° ê¸€ìžì¤‘ì— ë³´í†µí¬ê¸° -->
     <h1 class="display-3">
       <%= greeting %>
     </h1>
@@ -37,9 +41,14 @@
 <div class="container">
   <div class="text-center">
     <h3><h1><%=tagline%></h1></h3>
+    <%
+    Date today = new Date();
+    SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
+    out.println("í˜„ìž¬ ì ‘ì† ì‹œê°„:" + format.format(today));
+    %>
   </div>
   <footer class="cotainer">
-  <p >&copy; WebMarket</p>>
+  <p >&copy; WebMarket</p>
   </footer>
 </div>
 </body>
