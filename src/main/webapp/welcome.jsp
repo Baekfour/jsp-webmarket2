@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
    <%@ page import="java.util.Date" %>
-   <%@ page import="java.text.SimpleDateFormat" %>
+	   <%@ page import="java.text.SimpleDateFormat" %>
    
    
 <!DOCTYPE html>
@@ -13,14 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-   <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <ul class="container">
-         <li class="navbar-header">
-            <a class="navbar-brand" href="./welcome.jsp">Home</a>
-            <a class="navbar-brand" href="./welcome.jsp">Home</a>
-         </li>
-      </ul>
-   </nav>
+  <jsp:include page="menu.jsp" />
    <%!// 변수, 메소드 선언
    String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
    String tagline = "Welcome to Web Market!";%>
@@ -40,16 +33,14 @@
 </div>
 <div class="container">
   <div class="text-center">
-    <h3><h1><%=tagline%></h1></h3>
+    <h3><%=tagline%></h3>
     <%
     Date today = new Date();
     SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
     out.println("현재 접속 시간" + format.format(today));
     %>
   </div>
-  <footer class="cotainer">
-  <p >&copy; WebMarket</p>
-  </footer>
+  <jsp:include page="footer.jsp" />
 </div>
 </body>
 </html>

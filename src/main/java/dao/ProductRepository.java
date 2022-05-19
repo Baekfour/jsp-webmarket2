@@ -3,7 +3,7 @@ package dao;
 import java.util.ArrayList;
 import java.util.List;
 import dto.Product;
-
+// 교재 132P
 // Product에 대한 기능을 정의(상품정보 정리하는 클래스)
 public class ProductRepository {
 	private List<Product> products = new ArrayList<>();
@@ -18,14 +18,14 @@ public class ProductRepository {
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
 		
-		Product notebook = new Product("1234", "iphone 6s", 1500000);
+		Product notebook = new Product("1235", "iphone 6s", 1500000);
 		notebook.setDescription("4.5-inch, 1334X750 ");
 		notebook.setCategory("Smart Phone");
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refubished");
 		
-		Product tablet = new Product("1234", "iphone 6s", 900000);
+		Product tablet = new Product("1236", "iphone 6s", 900000);
 		tablet.setDescription("4.5-inch, 1334X750 ");
 		tablet.setCategory("Smart Phone");
 		tablet.setManufacturer("Samsung");
