@@ -23,7 +23,7 @@
 		<!-- container :좌우 가운데 정렬 -->
 		<div class="container">
 			<!-- display-3 : 큰 글자중에 보통크기-->
-			<h1 class="display-3">상품목록</h1>
+			<h1 class="display-3">상품 목록</h1>
 		</div>
 	</div>
 	<%

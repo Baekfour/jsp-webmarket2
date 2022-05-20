@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
    <%@ page import="java.util.Date" %>
-	   <%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.text.SimpleDateFormat" %>
    
    
 <!DOCTYPE html>
@@ -35,6 +35,8 @@
   <div class="text-center">
     <h3><%=tagline%></h3>
     <%
+    // 1초에 한번씩 새로고침
+    response.setIntHeader("Refresh", 1);
     Date today = new Date();
     SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
     out.println("현재 접속 시간" + format.format(today));

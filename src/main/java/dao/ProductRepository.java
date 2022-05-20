@@ -41,4 +41,13 @@ public class ProductRepository {
 	public List<Product> getAllProducts(){
 		return products;
 	}
+	
+	//ID로 상품 찾기
+	public Product getProductById(String productId) {
+		return products.stream() //상품3개 흘러갑니다
+				// 필요한것 거르는 과정
+				.filter((product) -> product.getProductId().equals(productId))
+				.findFirst() // 첫번째 것
+				.get(); //얻기
+	}
 }
