@@ -4,6 +4,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="dto.Product" %>
+
 <!-- session 서버측에 저장 -->
 <!DOCTYPE html>
 <html>
@@ -14,6 +15,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+
     <jsp:include page="menu.jsp" />
     
     <div class="p-5 bg-primary text-white">
@@ -44,6 +46,7 @@
 	               <a class="btn btn-secondary" role="button" href="./product.jsp?id=<%= product.getProductId() %>">
 	                   상세 정보 &raquo;
 	               </a>
+	               <c: value= "Hello World" />
                </p>
 	       </div>
 	    <%    
